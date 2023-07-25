@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,9 +21,7 @@ const PostHeader: React.FC<PostProps> = (props) => (
       alt={props.name}
       className="profile-image w-24 h-24 rounded-full mb-2 sm:mb-0 sm:mr-4"
       width={100}
-      height={100}
-      layout="fixed"
-    />
+      height={100} />
     <div>
       <span className="name font-bold text-xl">{props.name}</span>
       <span className="handle text-gray-500">@{props.handle}</span>
