@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-type PostProps = {
+export type PostProps = {
   profileImage: string;
   name: string;
   handle: string;
@@ -15,7 +15,7 @@ type PostProps = {
 };
 
 const PostHeader: React.FC<PostProps> = (props) => (
-  <div className="profile-section flex flex-col sm:flex-row items-center mb-4">
+  <div className="profile-section flex flex-col sm:flex-row items-center mb-6">
     <Image
       src={props.profileImage}
       alt={props.name}
@@ -33,24 +33,23 @@ const PostHeader: React.FC<PostProps> = (props) => (
 
 const PostBody: React.FC<PostProps> = (props) => (
   <>
-    <h2 className="headline text-2xl mb-2">{props.headline}</h2>
-    <p className="body text-gray-700 mb-4">{props.body}</p>
-    <div className="bg-red-500">This should have a red background</div>
+    <h2 className="headline font-semibold text-2xl mb-4">{props.headline}</h2>
+    <p className="body text-gray-700 mb-6">{props.body}</p>
   </>
 );
 
 const PostFooter: React.FC<PostProps> = (props) => (
-  <div className="post-footer flex justify-between">
+  <div className="post-footer flex justify-between items-center mt-6">
     <span className="likes flex items-center">
       <FontAwesomeIcon icon={faHeart} width="24" height="24" className="text-red-500 mr-2" />
       {props.likes}
     </span>
-    <button className="connect-btn bg-blue-500 text-white py-1 px-4 rounded">Connect</button>
+    <button className="connect-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-2 px-5 rounded transition duration-300">Connect</button>
   </div>
 );
 
 const PostCard: React.FC<PostProps> = (props) => (
-  <div className="post-card bg-white p-4 rounded shadow-md">
+  <div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4">
     <PostHeader {...props} />
     <PostBody {...props} />
     <PostFooter {...props} />
