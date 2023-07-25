@@ -1,3 +1,4 @@
+/* @import 'tailwindcss/base'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +25,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
 }
