@@ -6,11 +6,14 @@ export type FormData = {
     tags: string[];
 };
 
+console.log("Current formData:", FormData);
+
 type CreatePostProps = {
     onPostSubmit: (formData: FormData) => void;
 };
 
 const CreatePost: React.FC<CreatePostProps> = ({ onPostSubmit }) => {
+    console.log("CreatePost component has been mounted.");
     const [formData, setFormData] = useState<FormData>({
         title: '',
         description: '',
@@ -30,11 +33,17 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostSubmit }) => {
 
     const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        onPostSubmit(formData);
-    };
+        try {
+            console.log("Submitting form data:", formData);
+            onPostSubmit(formData);
+            console.log("Form data submitted successfully");
+        } catch (error) {
+            console.error("Error while submitting form data:", error);
+        }
+    };    
 
     return (
-        <div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4">
+        <div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4 rounded-box">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">Title</label>
@@ -47,7 +56,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostSubmit }) => {
                 </div>
 
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tags">Tags (Press Enter to add a tag. Max 3 tags)</label>
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tags">Tags (Press &apos;Enter&apos; to add a tag. Max 3 tags)</label>
                     <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tags" type="text" onKeyPress={handleTagInput} />
                     <div className="flex space-x-2 mt-2">
                         {formData.tags.map((tag, idx) => (
