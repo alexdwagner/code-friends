@@ -1,13 +1,15 @@
+// PostList.tsx
 import React from 'react';
-import PostCard, { PostProps } from './PostCard';  
-import { postData } from './Data';  
+import PostCard, { PostProps } from './PostCard';
 
-function PostList() {
-  console.log(postData);
+interface PostListProps {
+  posts: PostProps[];
+}
 
+const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <div className="container mx-auto px-4">
-      {postData.map((post: PostProps, index: number) => (
+      {posts.map((post, index) => (
         <PostCard key={index} {...post} />
       ))}
     </div>

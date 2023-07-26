@@ -1,16 +1,17 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import SearchBar from "../../components/SearchBar";
-import PostCard from "../../components/PostCard";
-import PostList from "../../components/PostList"; 
+import React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import SearchBar from '../../components/SearchBar';
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Header />
       <SearchBar />
-      <PostList /> 
+      {/* Other content or welcome message can go here */}
       <Footer />
     </>
   );
 }
+
+export default Home;
