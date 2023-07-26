@@ -1,4 +1,5 @@
-// pages/login.tsx
+// pages/login.tsx - Currently not being used. Login form is in the Home page for now.
+
 import React from 'react';
 
 function LoginPage() {

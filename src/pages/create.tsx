@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import CreatePost, { FormData } from '../../components/CreatePost';
+import Header from '../../components/layout/Header';
+import Footer from '../../components/layout/Footer';
+import CreatePost, { FormData } from '../../components/posts/CreatePost';
 
 function CreatePostPage() {
     const handlePostSubmit = async (formData: FormData) => {

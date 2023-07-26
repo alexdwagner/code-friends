@@ -1,8 +1,8 @@
 // pages/posts.tsx
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import PostList from '../../components/PostList';
+import Header from '../../components/layout/Header';
+import Footer from '../../components/layout/Footer';
+import PostList from '../../components/posts/PostList';
 import { postData } from '../../components/Data';  // Import the dummy data
 
 function PostsPage() {
