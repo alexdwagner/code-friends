@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 const Nav: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
-    const menuRef = useRef(null);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -17,8 +17,8 @@ const Nav: React.FC = () => {
         };
     }, []);
 
-    const handleClickOutside = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+        if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
             setIsOpen(false);
         }
     };
