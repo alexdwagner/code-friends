@@ -1,4 +1,4 @@
-import { PostProps } from './PostCard';
+import { PostProps } from '../types';
 
 export const postData: PostProps[] = [
     {

@@ -1,21 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link';
+import { PostProps, UserProps } from '../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-
-export type PostProps = {
-  profileImage: string;
-  name: string;
-  handle: string;
-  descriptor: string;
-  offeringMentorship: boolean;
-  seekingMentorship: boolean;
-  lastActive: number;
-  headline: string;
-  body: string;
-  likes: number;
-  tags: string[];
-};
 
 const PostHeader: React.FC<PostProps> = (props) => (
   <div className="profile-section flex flex-col sm:flex-row items-center mb-6">
@@ -49,7 +37,11 @@ const PostFooter: React.FC<PostProps> = (props) => (
       <FontAwesomeIcon icon={faHeart} width="24" height="24" className="text-red-500 mr-2" />
       {props.likes}
     </span>
-    <button className="connect-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-2 px-5 rounded transition duration-300">Connect</button>
+    <Link href={`/chat?user=${props.handle}`}>
+      <button className="chat-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-2 px-5 rounded transition duration-300">
+        Chat
+      </button>
+    </Link>  
   </div>
 );
 
@@ -64,13 +56,14 @@ const PostTags: React.FC<{ tags: string[] }> = ({ tags }) => (
 );
 
 const PostCard: React.FC<PostProps> = (props) => (
-<div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4 rounded-box">
+  <div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4 rounded-box">
     <PostHeader {...props} />
     <PostBody {...props} />
     <PostTags tags={props.tags} />
     <PostFooter {...props} />
   </div>
 );
+
 
 
 export default PostCard;

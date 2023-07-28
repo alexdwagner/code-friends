@@ -68,7 +68,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostSubmit }) => {
                     }
                 </div>
 
-                <button className="connect-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-2 px-5 rounded transition duration-300" type="submit">Publish</button>
+                <button className="chat-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-2 px-5 rounded transition duration-300" type="submit">Publish</button>
             </form>
         </div>
     );
