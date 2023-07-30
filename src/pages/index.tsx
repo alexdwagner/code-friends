@@ -5,10 +5,9 @@ import Footer from '../components/layout/Footer';
 import Login from '../components/auth/Login';
 
 const Home: React.FC = () => {
-  // Authentication logic goes here.
+  // Refactor this block. The logic for handling the login should be in the Login component.
   const handleLogin = (username: string, password: string) => {
     console.log('Logging in with:', username, password);
-    // API call to authenticate the user.
   };
 
   return (

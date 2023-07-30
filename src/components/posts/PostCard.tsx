@@ -10,7 +10,7 @@ const PostHeader: React.FC<PostProps> = (props) => (
     <Image
       src={props.profileImage}
       alt={props.name}
-      className="profile-image w-24 h-24 rounded-full mb-2 sm:mb-0 sm:mr-4"
+      className="profile-image w-24 rounded-full mb-2 h-60 md:h-72 lg:h-80 sm:mb-0 sm:mr-4" // Change this, you only need to specify for larger screen resolutions
       width={100}
       height={100} />
     <div>

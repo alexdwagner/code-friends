@@ -15,7 +15,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onLogin(username, password);
-        setLoginSuccess(true);  // Indicate success after calling onLogin
+        setLoginSuccess(true);  // This should replaced by actual login logic. Line 17 and 18 should be clubbed together.
         setTimeout(() => {
             router.push('/posts');  // Redirect to posts page after a delay
         }, 1000);  // 1 second delay for demonstration purposes
