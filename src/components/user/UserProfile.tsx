@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PostCard from '../../components/posts/PostCard';
-import { PostProps, UserProps } from '../../types';
+import PostCard from '../posts/PostCard';
+import { PostProps, UserProps } from '../../../types';
 
 interface UserProfileProps {
     user: {

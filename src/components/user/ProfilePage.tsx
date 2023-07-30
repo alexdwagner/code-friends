@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
 import UserProfile from './UserProfile';
-import { PostProps, UserProps } from '../../types';
+import { PostProps, UserProps } from '../../../types';
 
 import { postData } from '../Data'; 
 

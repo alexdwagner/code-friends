@@ -1,5 +1,5 @@
 import { postData } from './Data';
-import { User, Chat, Message } from '../types';  
+import { User, Chat, Message } from '../../types';  
 
 // Convert post data to user data
 const users: User[] = postData.map((post, index) => ({

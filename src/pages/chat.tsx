@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
-import { sampleChats } from '../../components/ChatData';  
-import ChatList from '../../components/chat/ChatList'; 
-import ChatWindow from '../../components/chat/ChatWindow';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import { sampleChats } from '../components/ChatData';  
+import ChatList from '../components/chat/ChatList'; 
+import ChatWindow from '../components/chat/ChatWindow';
 import { User, Chat, Message } from '../../types';  
 
 const ChatPage: React.FC = () => {

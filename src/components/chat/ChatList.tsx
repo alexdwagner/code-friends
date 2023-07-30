@@ -1,7 +1,7 @@
 import React from 'react';
 import ChatListItem from './ChatListItem';  
 import { sampleChats } from '../ChatData';
-import { User, Chat, Message } from '../../types';  
+import { User, Chat, Message } from '../../../types';  
 
 
 

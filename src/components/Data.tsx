@@ -1,4 +1,4 @@
-import { PostProps } from '../types';
+import { PostProps } from '../../types';
 
 export const postData: PostProps[] = [
     {

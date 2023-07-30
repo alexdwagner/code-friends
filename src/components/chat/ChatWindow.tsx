@@ -2,7 +2,7 @@ import React from 'react';
 import ChatHeader from './ChatHeader';
 import ChatInputBox from './ChatInputBox';
 import MessageItem from './MessageItem';
-import { User, Message } from '../../types';
+import { User, Message } from '../../../types';
 
 type ChatWindowProps = {
     user: User;

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import { PostProps, UserProps } from '../../types';
+import { PostProps, UserProps } from '../../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 

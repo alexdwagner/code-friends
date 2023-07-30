@@ -1,8 +1,8 @@
 // pages/index.tsx
 import React from 'react';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
-import Login from '../../components/auth/Login';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import Login from '../components/auth/Login';
 
 const Home: React.FC = () => {
   // Authentication logic goes here.
