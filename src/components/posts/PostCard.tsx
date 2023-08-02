@@ -21,13 +21,14 @@ const PostHeader: React.FC<PostProps> = (props) => (
 
     {/* Topic and User Info */}
     <div className="mb-4 px-4">
-      <span className="name font-inter text-black text-sm font-semibold block">{props.topic}</span>
-      <span className="handle font-inter text-black" style={{fontSize: '10px'}}>@{props.handle}</span>
-      <span className="descriptor text-black mx-1" style={{fontSize: '10px'}}>•</span>
-      <span className="descriptor font-inter text-black" style={{fontSize: '10px'}}>{props.descriptor}</span>
-      <span className="descriptor text-black mx-1" style={{fontSize: '10px'}}>•</span>
-      <span className="last-active font-inter text-black" style={{fontSize: '10px'}}>{props.lastActive}h</span>
-    </div>
+  <span className="name font-inter text-black text-sm md:text-base lg:text-lg font-semibold block">{props.topic}</span>
+  <span className="handle font-inter text-black text-xs md:text-sm lg:text-base">@{props.handle}</span>
+  <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
+  <span className="descriptor font-inter text-black text-xs md:text-sm lg:text-base">{props.descriptor}</span>
+  <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
+  <span className="last-active font-inter text-black text-xs md:text-sm lg:text-base">{props.lastActive}h</span>
+</div>
+
 
   </div>
 );

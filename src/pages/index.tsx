@@ -17,8 +17,7 @@ const Home: React.FC = () => {
         <h1 className="text-3xl font-bold mb-6 text-gray-800 leading-tight tracking-tighter border-b-2 border-gray-300 pb-2 px-0 py-2">
           Welcome to CodeFriends!
         </h1>
-        <p className="mb-6 text-gray-700">Please login to continue.</p>
-        <Login onLogin={handleLogin} />
+        <Login />
       </div>
       <Footer />
     </>
