@@ -7,6 +7,7 @@ export type PostProps = {
     name: string;
     handle: string;
     descriptor: string;
+    topic: string;  
     offeringMentorship: boolean;
     seekingMentorship: boolean;
     lastActive: number;

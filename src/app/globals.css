@@ -54,3 +54,9 @@ body {
   border-radius: 20px;
 }
 
+.truncate-6-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}

@@ -2,10 +2,11 @@ import { PostProps } from '../../types';
 
 export const postData: PostProps[] = [
     {
-      profileImage: "/path-to-image1.jpg",
+      profileImage: `https://robohash.org/johndoe.png?size=30x30`,
       name: "John Doe",
       handle: "johndoe",
       descriptor: "Frontend Developer",
+      topic: "Software Engineering",
       offeringMentorship: true,
       seekingMentorship: false,
       lastActive: 1,
@@ -15,23 +16,25 @@ export const postData: PostProps[] = [
       tags: ["React", "Next.js", "JavaScript"]
     },
     {
-      profileImage: "/path-to-image2.jpg",
+      profileImage: `https://robohash.org/janesmith.png?size=30x30`,
       name: "Jane Smith",
       handle: "janesmith",
       descriptor: "Backend Developer",
+      topic: "Software Engineering",
       offeringMentorship: false,
       seekingMentorship: true,
       lastActive: 2,
       headline: "Express.js Guru",
-      body: "Backend development has been my passion and I specialize in Node and Express...",
+      body: "Backend development is my passion. I specialize in Node and Express...",
       likes: 42,
       tags: ["Node.js", "Express", "Backend"]
     },
     {
-      profileImage: "/path-to-image3.jpg",
+      profileImage: `https://robohash.org/aliceb.png?size=30x30`,
       name: "Alice Brown",
       handle: "aliceb",
       descriptor: "Full Stack Developer",
+      topic: "Software Engineering",
       offeringMentorship: true,
       seekingMentorship: true,
       lastActive: 5,
@@ -41,10 +44,11 @@ export const postData: PostProps[] = [
       tags: ["MongoDB", "Express", "React"]
     },
     {
-      profileImage: "/path-to-image4.jpg",
+      profileImage: `https://robohash.org/bobwhite.png?size=30x30`,
       name: "Bob White",
       handle: "bobwhite",
       descriptor: "Mobile App Developer",
+      topic: "Software Engineering",
       offeringMentorship: false,
       seekingMentorship: false,
       lastActive: 3,
@@ -54,10 +58,11 @@ export const postData: PostProps[] = [
       tags: ["Flutter", "Dart", "Mobile"]
     },
     {
-      profileImage: "/path-to-image5.jpg",
+      profileImage: `https://robohash.org/charlieg.png?size=30x30`,
       name: "Charlie Green",
       handle: "charlieg",
       descriptor: "Data Scientist",
+      topic: "Career Guidance",
       offeringMentorship: true,
       seekingMentorship: false,
       lastActive: 7,
