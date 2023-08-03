@@ -10,6 +10,9 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        'sm-md': '450px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

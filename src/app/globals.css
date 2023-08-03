@@ -30,7 +30,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-attachment: fixed; /* Fixes the gradient relative to the viewport */
+  background-attachment: fixed; 
 }
 
 .header {
@@ -59,4 +59,8 @@ body {
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;  
   overflow: hidden;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
 }

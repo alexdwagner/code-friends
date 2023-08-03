@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from 'next/link';
 import { PostProps, UserProps } from '../../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faUserFriends} from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 
 const PostHeader: React.FC<PostProps> = (props) => (
   <div className="profile-section flex items-center space-x-4">
-    
+
     <div className="flex-shrink-0 relative overflow-hidden mb-8 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
       <div className="relative w-full h-full">
-        <img 
+        <img
           src={`https://robohash.org/${props.handle}`}
           alt={props.name}
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -21,13 +21,13 @@ const PostHeader: React.FC<PostProps> = (props) => (
 
     {/* Topic and User Info */}
     <div className="mb-4 px-4">
-  <span className="name font-inter text-black text-sm md:text-base lg:text-lg font-semibold block">{props.topic}</span>
-  <span className="handle font-inter text-black text-xs md:text-sm lg:text-base">@{props.handle}</span>
-  <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
-  <span className="descriptor font-inter text-black text-xs md:text-sm lg:text-base">{props.descriptor}</span>
-  <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
-  <span className="last-active font-inter text-black text-xs md:text-sm lg:text-base">{props.lastActive}h</span>
-</div>
+      <span className="name font-inter text-black text-sm md:text-base lg:text-lg font-semibold block">{props.topic}</span>
+      <span className="handle font-inter text-black text-xs md:text-sm lg:text-base">@{props.handle}</span>
+      <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
+      <span className="descriptor font-inter text-black text-xs md:text-sm lg:text-base">{props.descriptor}</span>
+      <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
+      <span className="last-active font-inter text-black text-xs md:text-sm lg:text-base">{props.lastActive}h</span>
+    </div>
 
 
   </div>
@@ -58,7 +58,7 @@ const PostFooter: React.FC<PostProps> = (props) => (
 );
 
 const PostCard: React.FC<PostProps> = (props) => (
-<div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4 rounded-box flex-col">
+  <div className="post-card bg-white p-6 rounded shadow-md border border-gray-200 hover:shadow-lg transition duration-300 mb-4 rounded-box flex-col">
     <PostHeader {...props} />
     <PostBody {...props} />
     {/* <PostTags tags={props.tags} /> */}

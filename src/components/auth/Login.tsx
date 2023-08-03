@@ -41,7 +41,7 @@ const Login: React.FC = () => {
     };
     return (
         <FormProvider {...formMethods}>
-            <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-300 hover:shadow-2xl transition duration-300 mb-4 w-full max-w-md mx-auto mt-8 md:w-1/2 lg:w-3/4 flex flex-col items-center md:items-start">
+            <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-300 hover:shadow-2xl transition duration-300 mb-4 mx-auto min-w-[390px] mt-2 w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center md:items-start">
                 <h2 className="text-2xl font-semibold mb-4 text-center md:text-left lg:text-left md:text-3xl lg:text-4xl">Welcome to CodeFriends.</h2>
                 <p className="mb-4 text-gray-700 text-center md:text-left lg:text-left md:text-lg lg:text-xl">
                     <b>CodeFriends is a platform for coders to connect and collaborate.</b>
@@ -60,7 +60,7 @@ const Login: React.FC = () => {
                 <br></br>
                 <p className="mb-4 text-gray-700 text-center md:text-left lg:text-left italic md:text-lg lg:text-xl">
                     Create an account and find your next mentor(or mentee) today. Or just
-                    <Link href="/posts" className="text-blue-500 hover:underline">have a look around</Link>
+                    <Link href="/posts" className="text-blue-500 hover:underline"> have a look around.</Link>
                 </p>
 
                 <hr className="w-full border-t border-gray-200 my-4" />

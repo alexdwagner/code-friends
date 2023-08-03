@@ -12,7 +12,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Preconnect to the domain */}
+
           <link rel="preconnect" href="https://rsms.me/" />
           
           {/* Inter font stylesheet */}
