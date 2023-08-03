@@ -1,5 +1,12 @@
 // types.ts
 
+// User authentication related types
+
+export type LoginData = {
+    username: string;
+    password: string;
+  };
+
 // Post related types
 
 export type PostProps = {

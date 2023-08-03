@@ -14,9 +14,6 @@ const Home: React.FC = () => {
     <>
       <Header />
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800 leading-tight tracking-tighter border-b-2 border-gray-300 pb-2 px-0 py-2">
-          Welcome to CodeFriends!
-        </h1>
         <Login />
       </div>
       <Footer />

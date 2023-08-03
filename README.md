@@ -42,6 +42,8 @@ Now, the application should be running at http://localhost:3000.
 * Next.js: For server-side rendering and routing.
 * TypeScript: For static type checking.
 * Tailwind CSS: For utility-first CSS styling.
+* React Query: For data fetching and caching.
+* react-hook-form: For form validation.
 * Font Awesome: For icons.
 
 ## Contribution
