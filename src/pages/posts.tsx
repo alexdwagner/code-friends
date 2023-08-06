@@ -7,7 +7,7 @@ import { postData } from '../components/Data';  // Dummy data
 
 // This function returns the dummy data. In a real app, this would be an API call.
 const fetchPosts = async () => {
-    return postData;
+  return postData;
 };
 
 function PostsPage() {
@@ -20,10 +20,10 @@ function PostsPage() {
       <div className="container mx-auto px-2">
         <h1 className="text-3xl font-bold mb-6 text-gray-800 leading-tight tracking-tighter border-b-2 border-gray-300 pb-2 px-0 py-2">
           Latest Posts
-        </h1> 
+        </h1>
         {isLoading && <p>Loading...</p>}
         {isError && <p>Error loading posts.</p>}
-        {posts && <PostList posts={posts} />}
+        <PostList />
       </div>
       <Footer />
     </>

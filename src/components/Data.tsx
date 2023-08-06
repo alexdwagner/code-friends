@@ -2,6 +2,7 @@ import { PostProps } from '../../types';
 
 export const postData: PostProps[] = [
     {
+      id: 1,
       profileImage: `https://robohash.org/johndoe.png?size=30x30`,
       name: "John Doe",
       handle: "johndoe",
@@ -16,6 +17,7 @@ export const postData: PostProps[] = [
       tags: ["React", "Next.js", "JavaScript"]
     },
     {
+      id: 2,
       profileImage: `https://robohash.org/janesmith.png?size=30x30`,
       name: "Jane Smith",
       handle: "janesmith",
@@ -30,6 +32,7 @@ export const postData: PostProps[] = [
       tags: ["Node.js", "Express", "Backend"]
     },
     {
+      id: 3,
       profileImage: `https://robohash.org/aliceb.png?size=30x30`,
       name: "Alice Brown",
       handle: "aliceb",
@@ -44,6 +47,7 @@ export const postData: PostProps[] = [
       tags: ["MongoDB", "Express", "React"]
     },
     {
+      id: 4,
       profileImage: `https://robohash.org/bobwhite.png?size=30x30`,
       name: "Bob White",
       handle: "bobwhite",
@@ -58,6 +62,7 @@ export const postData: PostProps[] = [
       tags: ["Flutter", "Dart", "Mobile"]
     },
     {
+      id: 5,
       profileImage: `https://robohash.org/charlieg.png?size=30x30`,
       name: "Charlie Green",
       handle: "charlieg",

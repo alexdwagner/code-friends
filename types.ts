@@ -10,6 +10,7 @@ export type LoginData = {
 // Post related types
 
 export type PostProps = {
+    id: number;
     profileImage: string;
     name: string;
     handle: string;
@@ -27,6 +28,7 @@ export type PostProps = {
 // User related types
 
 export type UserProps = {
+    id: number;
     profileImage: string;
     name: string;
     handle: string;
@@ -37,28 +39,28 @@ export type UserProps = {
     posts: PostProps[];
 };
 
-export type User = {
-    id: number;
-    name: string;
-    handle: string;
-    profileImage: string;
-    descriptor: string;
-    offeringMentorship: boolean;
-    seekingMentorship: boolean;
-    lastActive: number;
-    posts: PostProps[];
-};
+// export type User = {
+//     id: number;
+//     name: string;
+//     handle: string;
+//     profileImage: string;
+//     descriptor: string;
+//     offeringMentorship: boolean;
+//     seekingMentorship: boolean;
+//     lastActive: number;
+//     posts: PostProps[];
+// };
 
 // Chat related types
 
 export type Message = {
-    sender: User;
+    sender: UserProps;
     text: string;
     timestamp: Date;
 }
 
 export type Chat = {
     id: string;
-    user: User;
+    user: UserProps;
     messages: Message[];
 }
