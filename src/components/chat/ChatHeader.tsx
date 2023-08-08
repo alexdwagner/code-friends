@@ -1,8 +1,8 @@
 import React from 'react';
-import { User } from '../../../types';
+import { UserProps } from '../../../types';
 
 type ChatHeaderProps = {
-    user: User;
+    user: UserProps;
     className?: string;
 };
 

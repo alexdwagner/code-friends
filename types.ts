@@ -1,55 +1,46 @@
 // types.ts
 
 // User authentication related types
-
 export type LoginData = {
     username: string;
     password: string;
   };
 
-// Post related types
-
-export type PostProps = {
-    id: number;
+// User-related types
+export type UserProps = {
+    userId: number;
     profileImage: string;
-    name: string;
-    handle: string;
+    userName: string;
+    userHandle: string;
+    email: string;
     descriptor: string;
-    topic: string;  
     offeringMentorship: boolean;
     seekingMentorship: boolean;
     lastActive: number;
-    headline: string;
-    body: string;
+};
+
+// Author-related types
+export type AuthorProps = {
+    userId: number;
+    userName: string;
+    userHandle: string;
+};
+
+// Post-related types
+export type PostProps = {
+    postId: number;
+    author: AuthorProps;
+    postTopic: string;
+    postHeadline: string;
+    postBody: string;
     likes: number;
     tags: string[];
 };
 
-// User related types
-
-export type UserProps = {
-    id: number;
-    profileImage: string;
-    name: string;
-    handle: string;
-    descriptor: string;
-    offeringMentorship: boolean;
-    seekingMentorship: boolean;
-    lastActive: number;
+// Extended user type that includes posts
+export type ExtendedUserProps = UserProps & {
     posts: PostProps[];
 };
-
-// export type User = {
-//     id: number;
-//     name: string;
-//     handle: string;
-//     profileImage: string;
-//     descriptor: string;
-//     offeringMentorship: boolean;
-//     seekingMentorship: boolean;
-//     lastActive: number;
-//     posts: PostProps[];
-// };
 
 // Chat related types
 
@@ -64,3 +55,9 @@ export type Chat = {
     user: UserProps;
     messages: Message[];
 }
+
+export type InboxProps {
+    chatRequests: ChatRequest[];
+    onAcceptRequest: (requestId: number) => void;
+    onRejectRequest: (requestId: number) => void;
+  }

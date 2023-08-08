@@ -4,7 +4,7 @@ import React from 'react';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import UserProfile from '../components/user/UserProfile';
-import { postData } from '../components/Data'; 
+import { postData } from '../components/UsersData'; 
 
 const Profile: React.FC = () => {
     // Using the first post's data for the dummy userData

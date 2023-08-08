@@ -1,13 +1,13 @@
 import React from 'react';
 import ChatListItem from './ChatListItem';  
-import { sampleChats } from '../ChatData';
-import { User, Chat, Message } from '../../../types';  
+import { sampleChats } from '../ChatsData';
+import { UserProps, Chat, Message } from '../../../types';  
 
 
 
 type ChatListProps = {
-    users: User[];
-    onUserSelect: (user: User) => void;
+    users: UserProps[];
+    onUserSelect: (user: UserProps) => void;
     selectedChat?: Chat;  
 };
 

@@ -2,10 +2,10 @@ import React from 'react';
 import ChatHeader from './ChatHeader';
 import ChatInputBox from './ChatInputBox';
 import MessageItem from './MessageItem';
-import { User, Message } from '../../../types';
+import { UserProps, Message } from '../../../types';
 
 type ChatWindowProps = {
-    user: User;
+    user: UserProps;
     messages: Message[];
 };
 
