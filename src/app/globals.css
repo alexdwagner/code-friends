@@ -24,13 +24,13 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   margin: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-attachment: fixed; 
+  background-attachment: fixed;  */
 }
 
 .header {

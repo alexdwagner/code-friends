@@ -2,17 +2,20 @@ import { createContext, useContext, useState } from 'react';
 
 interface AuthStateContextProps {
   isAuthenticated: boolean;
-  login: () => void;
+  login: (username: string, password: string) => void; // Make sure to update this
   logout: () => void;
-  // Add other authentication-related functions as needed
 }
 
 const AuthStateContext = createContext<AuthStateContextProps | undefined>(undefined);
 
-export const AuthStateProvider: React.FC = ({ children }) => {
+interface AuthStateProviderProps {
+  children: React.ReactNode; // Add children prop
+}
+
+export const AuthStateProvider: React.FC<AuthStateProviderProps> = ({ children }) => { // Add the type for props
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const login = () => {
+  const login = (username: string, password: string) => { // Updated to accept username and password
     // Logic to login
   };
 

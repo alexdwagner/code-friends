@@ -2,13 +2,11 @@
 import React from 'react';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import Login from '../components/auth/Login';
 import Link from 'next/link';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Header />
       <div className="container mx-auto">
         <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-300 hover:shadow-2xl transition duration-300 mb-4 mx-auto min-w-[390px] mt-2 w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center md:items-start">
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left lg:text-left md:text-3xl lg:text-4xl">Welcome to CodeFriends.</h2>
@@ -26,12 +24,22 @@ const Home: React.FC = () => {
             </ul>
           </div>
           <br />
-          <p className="mb-4 text-gray-700 text-center md:text-left lg:text-left italic md:text-lg lg:text-xl">
-            Create an account and find your next mentor(or mentee) today. Or just
-            <Link href="/posts" className="text-blue-500 hover:underline"> have a look around.</Link>
-          </p>
+          <div className="mt-2 flex flex-col gap-4 w-full text-center">
+          <Link href="/login">
+              <button className="bg-green-500 text-white py-3 rounded-lg font-bold text-xl hover:bg-green-600 shadow appearance-none border w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 mx-auto leading-tight focus:outline-none focus:shadow-outline">
+                Login
+              </button>
+            </Link>
+            <p>
+              <b>OR</b>
+            </p>
+            <Link href="/posts">
+              <button className="bg-blue-500 text-white py-3 rounded-lg font-bold text-xl hover:bg-blue-600 shadow appearance-none border w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 mx-auto leading-tight focus:outline-none focus:shadow-outline">
+                Explore the Site
+              </button>
+            </Link>
+          </div>
         </div>
-        <Login />
       </div>
       <Footer />
     </>

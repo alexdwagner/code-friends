@@ -7,9 +7,13 @@ interface ChatStateContextProps {
   // Add other state management functions as needed
 }
 
+interface ChatStateProviderProps {
+  children: React.ReactNode; 
+}
+
 const ChatStateContext = createContext<ChatStateContextProps | undefined>(undefined);
 
-export const ChatStateProvider: React.FC = ({ children }) => {
+export const ChatStateProvider: React.FC<ChatStateProviderProps> = ({ children }) => {
   const [chatRequests, setChatRequests] = useState<ChatRequest[]>([]);
 
   const sendChatRequest = (userId: number) => {
