@@ -10,7 +10,7 @@ type ChatHeaderProps = {
 const ChatHeader: React.FC<ChatHeaderProps> = ({ user, className }) => {
     return (
         <div className={className}>
-            {user.name} ({user.handle})
+            {user.userName} ({user.userHandle})
         </div>
     );
 };

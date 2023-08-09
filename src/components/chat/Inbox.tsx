@@ -11,7 +11,7 @@ const Inbox: React.FC<InboxProps> = ({ chatRequests, onAcceptRequest, onRejectRe
   return (
     <div>
       {chatRequests.map(request => (
-        <div key={request.id}>
+        <div key={request.userId}>
           <p>Request from {request.sender.userName}</p>
           <button onClick={() => onAcceptRequest(request.id)}>Accept</button>
           <button onClick={() => onRejectRequest(request.id)}>Reject</button>

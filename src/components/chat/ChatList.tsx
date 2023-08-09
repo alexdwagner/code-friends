@@ -17,7 +17,7 @@ const ChatList: React.FC<ChatListProps> = ({ users = [], onUserSelect }) => {
     return (
         <div className="chat-list">
             {users.map(user => (
-                <ChatListItem key={user.id} user={user} onClick={() => onUserSelect(user)} />
+                <ChatListItem key={user.userId} user={user} onClick={() => onUserSelect(user)} />
             ))}
         </div>
     );

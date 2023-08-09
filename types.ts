@@ -56,8 +56,17 @@ export type Chat = {
     messages: Message[];
 }
 
-export type InboxProps {
+// Definition for ChatRequest 
+export type ChatRequest = {
+    requestId: number;
+    fromUser: UserProps;
+    toUser: UserProps;
+    status: 'pending' | 'accepted' | 'rejected';
+  };
+  
+  // InboxProps type
+  export type InboxProps = {
     chatRequests: ChatRequest[];
     onAcceptRequest: (requestId: number) => void;
     onRejectRequest: (requestId: number) => void;
-  }
+  };
