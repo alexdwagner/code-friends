@@ -28,7 +28,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <FormProvider {...formMethods}>
-      <div className="rounded-lg hover:shadow-2xl transition duration-300 min-w-[390px] w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center">
+      <div className="rounded-lg transition duration-300 min-w-[390px] w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center">
         <form onSubmit={handleSubmit(onSubmit)} className="text-center w-3/4">
           <input
             {...register('username', { required: true })}
@@ -67,12 +67,14 @@ const LoginForm: React.FC = () => {
             <FaApple />
           </button>
         </div>
-        <p className="text-center mt-4">
+        <b>
+        <p className="text-center mt-4 text-gray-700">
           Don’t have an Account?{' '}
           <Link href="/register" className="text-blue-500 hover:underline">
             Create your account
           </Link>
         </p>
+        </b>
       </div>
     </FormProvider>
   );
