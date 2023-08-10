@@ -28,7 +28,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <FormProvider {...formMethods}>
-      <div className="rounded-lg transition duration-300 min-w-[390px] w-full sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center">
+      <div className="min-w-[390px] sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center mb-8">
         <form onSubmit={handleSubmit(onSubmit)} className="text-center w-3/4">
           <input
             {...register('username', { required: true })}
@@ -41,7 +41,7 @@ const LoginForm: React.FC = () => {
               {...register('password', { required: true })}
               type={showPassword ? 'text' : 'password'}
               placeholder="Password"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8"
             />
             <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute top-3 right-3 text-gray-600">
               {showPassword ? 'Hide' : 'Show'}
@@ -51,12 +51,12 @@ const LoginForm: React.FC = () => {
             Login
           </button>
         </form>
-        <p className="text-center my-4 text-gray-700">
+        <p className="text-center my-8 text-gray-700">
             <b>
           Or log in with:
           </b>
         </p>
-        <div className="flex justify-center gap-4 mb-2">
+        <div className="flex justify-center gap-4 mb-6">
           <button className="google-button p-6 bg-red-500 text-white py-2 rounded-lg shadow appearance-none border leading-tight focus:outline-none focus:shadow-outline">
             <FaGoogle />
           </button>

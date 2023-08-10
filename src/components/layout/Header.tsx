@@ -3,7 +3,7 @@ import Nav from './Nav';
 
 const Header: React.FC = () => {
     return (
-        <header className="header bg-gray-100 p-4 flex justify-between items-center">
+        <header className="header">
             <Nav />
         </header>
     );
