@@ -57,3 +57,4 @@ export const usersData: UserProps[] = [
     lastActive: 7,
   },
 ];
+

@@ -19,23 +19,18 @@ export type UserProps = {
     lastActive: number;
 };
 
-// Author-related types
-export type AuthorProps = {
-    userId: number;
-    userName: string;
-    userHandle: string;
-};
 
 // Post-related types
 export type PostProps = {
     postId: number;
-    author: AuthorProps;
+    author: UserProps; // Use UserProps here
     postTopic: string;
     postHeadline: string;
     postBody: string;
     likes: number;
     tags: string[];
 };
+
 
 // Extended user type that includes posts
 export type ExtendedUserProps = UserProps & {

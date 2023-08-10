@@ -1,7 +1,15 @@
+@import 'normalize.css';
+
 /* @import 'tailwindcss/base'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,21 +25,14 @@
   }
 }
 
-html {
-  height: 100%;
-  overflow: hidden;
+body {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; Fill the full viewport height */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  margin: 0;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  background-attachment: fixed;  */
+.main-content {
+  flex-grow: 1; /* Take up available space */
 }
 
 .header {

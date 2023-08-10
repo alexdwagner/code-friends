@@ -11,10 +11,10 @@ const Inbox: React.FC<InboxProps> = ({ chatRequests, onAcceptRequest, onRejectRe
   return (
     <div>
       {chatRequests.map(request => (
-        <div key={request.userId}>
-          <p>Request from {request.sender.userName}</p>
-          <button onClick={() => onAcceptRequest(request.id)}>Accept</button>
-          <button onClick={() => onRejectRequest(request.id)}>Reject</button>
+        <div key={request.requestId}>
+          <p>Request from {request.fromUser.userName}</p>
+          <button onClick={() => onAcceptRequest(request.requestId)}>Accept</button>
+          <button onClick={() => onRejectRequest(request.requestId)}>Reject</button>
         </div>
       ))}
     </div>

@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import PostList from '../components/posts/PostList';
-import { postData } from '../components/UsersData';  // Dummy data
+import { postData } from '../components/PostsData';
 
 // This function returns the dummy data. In a real app, this would be an API call.
 const fetchPosts = async () => {

@@ -8,8 +8,8 @@ type MessageItemProps = {
 const MessageItem: React.FC<MessageItemProps> = ({ message }) => {
     console.log('MessageItem component loaded with message:', message);
 
-        const isUser = message.sender.name === "You"; // placeholder logic
-        return (
+    const isUser = message.sender.userName === "You"; // Use userName instead of name
+    return (
             <div className={`p-3 rounded-lg ${isUser ? 'bg-blue-500 text-white self-end' : 'bg-gray-200 text-gray-800 self-start'}`}>
                 {message.text}
             </div>
