@@ -78,15 +78,18 @@ const RegisterForm: React.FC = () => {
           {...register('confirmPassword', { required: true, validate: value => value === getValues('password') || "Passwords don't match" })}
           type="password"
           placeholder="Confirm Password"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-6"
         />
         {errors.confirmPassword && <span className="text-red-500">{errors.confirmPassword.message}</span>}
+        <p className="text-gray-600 text-sm italic mb-6">
+          Password must be 8+ characters, and contain an uppercase letter, a lowercase letter, and a number.
+        </p>
         <button className="bg-blue-500 text-white py-3 rounded-lg font-bold text-xl hover:bg-blue-600 shadow appearance-none border w-full leading-tight focus:outline-none focus:shadow-outline">
           Sign Up
         </button>
       </form>
     </div>
-  ); 
+  );
 };
 
 export default RegisterForm;
