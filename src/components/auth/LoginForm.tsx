@@ -47,6 +47,15 @@ const LoginForm: React.FC = () => {
               {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
+          <div className="flex justify-between items-center mb-4">
+            <label className="text-gray-700">
+              <input type="checkbox" />
+              <span className="ml-2">Remember Me</span>
+            </label>
+            <Link href="/forgot-password" className="text-blue-500 hover:underline">
+              Forgot Password?
+            </Link>
+          </div>
           <button className="bg-blue-500 text-white py-3 rounded-lg font-bold text-xl hover:bg-blue-600 shadow appearance-none border w-full leading-tight focus:outline-none focus:shadow-outline">
             Login
           </button>

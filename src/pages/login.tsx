@@ -6,13 +6,11 @@ import LoginForm from '../components/auth/LoginForm'; // Import the LoginForm co
 const Login: React.FC = () => {
   return (
     <>
-      <Header />
-        <div className="flex flex-col main-content items-center lg:w-3/4 md:items-start md:w-3/4 min-w-[390px] p-6 sm-md:w-3/4 transition justify-between">
-          <h1 className="text-3xl font-semibold mb-4 text-center md:text-left lg:text-left md:text-3xl lg:text-4xl">Welcome back</h1>
-          <p className="mb-8 text-gray-700 text-center md:text-left lg:text-left md:text-lg lg:text-xl"><b>Log in to your account</b></p>
+        <div className="flex flex-col my-8 items-center lg:w-3/4 md:items-start justify-between md:w-3/4 min-w-[390px] p-6 sm-md:w-3/4 transition">
+          <div className="bg-cover bg-center w-full h-[235px] mb-8" style={{ backgroundImage: 'url(/images/mountain_climb.jpg)' }}></div>
+          <h1 className="text-3xl font-semibold mb-4 text-center md:text-left lg:text-left md:text-3xl lg:text-4xl">Sign In to CodeFriends</h1>
           <LoginForm /> {/* Render the LoginForm component */}
         </div>
-      <Footer />
     </>
   );
 };
