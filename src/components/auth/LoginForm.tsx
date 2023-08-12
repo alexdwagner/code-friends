@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
-import { useAuthState } from '../../../state/AuthContext'; // Adjust the path as needed
+// import { useAuthState } from '../../../state/AuthContext'; // Adjust the path as needed
 import { FaGoogle, FaFacebook, FaApple } from 'react-icons/fa';
 import Link from 'next/link';
+import { useRouter } from 'next/router'; // Import to handle redirection
 
 interface LoginData {
   username: string;
@@ -10,25 +11,37 @@ interface LoginData {
 }
 
 const LoginForm: React.FC = () => {
-  const { login } = useAuthState(); // Use the login function from context
+  // const { login } = useAuthState(); // Use the login function from context (commented out)
   const formMethods = useForm<LoginData>();
   const { register, handleSubmit, formState } = formMethods;
   const { errors } = formState;
-  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+  const [showPassword, setShowPassword] = useState(false);
+  const [loginSuccess, setLoginSuccess] = useState(false); // State to track login success
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<LoginData> = async (data) => {
     try {
-      await login(data.username, data.password); // Use the context login function
-      // Redirect logic here
-    } catch (error) {
-      console.error(error);
-      // Handle error
-    }
-  };
+      // Simulate successful login without making an actual HTTP request
+      // Uncomment the following line when you have server-side implementation
+      // await login(data.username, data.password); // Use the context login function
+
+      // Simulate successful login and redirect to posts page
+      if (data.username && data.password) {
+        setLoginSuccess(true); // Set success state to true
+        setTimeout(() => {
+            console.log('Login successful!');
+            router.push('/posts'); // Redirect after the delay
+          }, 1000);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
   return (
     <FormProvider {...formMethods}>
       <div className="min-w-[390px] sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center mb-8">
+        {loginSuccess && <div className="text-green-500 mb-4">Login successful!</div>} {/* Display success message */}
         <form onSubmit={handleSubmit(onSubmit)} className="text-center w-3/4">
           <input
             {...register('username', { required: true })}
@@ -41,7 +54,7 @@ const LoginForm: React.FC = () => {
               {...register('password', { required: true })}
               type={showPassword ? 'text' : 'password'}
               placeholder="Password"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-6"
             />
             <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute top-3 right-3 text-gray-600">
               {showPassword ? 'Hide' : 'Show'}
@@ -80,7 +93,7 @@ const LoginForm: React.FC = () => {
         <p className="text-center mt-4 text-gray-700">
           Don’t have an Account?{' '}
           <Link href="/register" className="text-blue-500 hover:underline">
-            Create your account
+            Sign up.
           </Link>
         </p>
         </b>
