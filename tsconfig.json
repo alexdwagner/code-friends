@@ -23,7 +23,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "alex-notes/features-to-build/AddInitialsProfPic"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "alex-notes/features-to-build/AddInitialsProfPic", "src/components/PostsData.js"],
   "exclude": [
     "node_modules",
     "alex-notes"

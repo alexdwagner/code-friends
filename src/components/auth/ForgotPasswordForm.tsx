@@ -7,14 +7,19 @@ interface ForgotPasswordData {
 }
 
 const ForgotPasswordForm: React.FC = () => {
-  const { register, handleSubmit, formState } = useForm<ForgotPasswordData>();
-  const { errors } = formState;
+  const { register, handleSubmit } = useForm<ForgotPasswordData>();
   const [success, setSuccess] = useState(false);
   const router = useRouter();
 
   const onSubmit: SubmitHandler<ForgotPasswordData> = async (data) => {
     try {
-      // Simulate successful email submission
+      // Simulate successful email submission with delay
+      setSuccess(true);
+      setTimeout(() => {
+        // Redirect to create-password page after 2 seconds
+        router.push('/create-password');
+      }, 2000);
+
       // Uncomment the following lines when you have server-side implementation
       /*
       const response = await fetch('/api/forgot-password', {
@@ -27,11 +32,12 @@ const ForgotPasswordForm: React.FC = () => {
 
       if (response.ok) {
         setSuccess(true);
+        setTimeout(() => {
+          // Redirect to create-password page after 2 seconds
+          router.push('/create-password');
+        }, 2000);
       }
       */
-
-      // Simulate success
-      setSuccess(true);
     } catch (error) {
       console.error(error);
     }
@@ -40,7 +46,7 @@ const ForgotPasswordForm: React.FC = () => {
   return (
     <div className="min-w-[390px] sm-md:w-3/4 md:w-3/4 lg:w-3/4 flex flex-col items-center mb-8">
       {success ? (
-        <div className="text-green-500 mb-4">Password reset link sent to your email!</div>
+        <div className="text-green-500 mb-4">Password reset link sent to your email! Redirecting...</div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="text-center w-3/4">
           <input

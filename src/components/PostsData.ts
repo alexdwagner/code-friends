@@ -1,9 +1,6 @@
 import { PostProps, UserProps } from '../../types';
 import { usersData } from './UsersData';
-
-const getAuthor = (userId: number): UserProps | undefined => {
-  return usersData.find(u => u.userId === userId);
-};
+import { getAuthor } from './utils/authorUtils';
 
 export const postData: PostProps[] = [
   {
@@ -20,7 +17,7 @@ export const postData: PostProps[] = [
       lastActive: 0,
     },
     postTopic: "Software Engineering",
-    postHeadline: "Exploring ReactJS and Next.js!",
+    postHeadline: "Want to get into AI and ML career path. Any devs working in ML on here?",
     postBody: "I’ve completed my bachelor in Computer Science Engineering. I want to get into Artificial Intelligence and machine learning, but I have no idea on where to start. I would appreciate any working professionals on the field of Software Engineering to provide guidance to me to get started.",
     likes: 16,
     tags: ["AI", "Machine Learning"],

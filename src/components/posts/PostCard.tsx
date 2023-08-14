@@ -14,8 +14,8 @@ const PostHeader: React.FC<{ author: PostProps['author'] }> = ({ author }) => (
       />
     </div>
     <div className="mb-4 px-4">
-      <span className="name font-inter text-black text-sm md:text-base lg:text-lg font-semibold block">{author.descriptor}</span>
-      <span className="handle font-inter text-black text-xs md:text-sm lg:text-base">@{author.userHandle}</span>
+      <span className="name font-inter text-black text-sm md:text-base lg:text-lg font-semibold block">{author.userName}</span>
+      <span className="handle font-inter text-black text-xs md:text-sm lg:text-base">@{author.descriptor}</span>
       <span className="descriptor text-black mx-1 text-xs md:text-sm lg:text-base">•</span>
       <span className="last-active font-inter text-black text-xs md:text-sm lg:text-base">{author.lastActive}h</span>
     </div>
