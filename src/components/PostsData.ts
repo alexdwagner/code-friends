@@ -1,5 +1,5 @@
 import { PostProps, UserProps } from '../../types';
-import { usersData } from './UsersData';
+import { usersData } from './UsersData.json';
 import { getAuthor } from './utils/authorUtils';
 
 export const postData: PostProps[] = [
