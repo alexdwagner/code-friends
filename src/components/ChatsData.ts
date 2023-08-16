@@ -1,4 +1,4 @@
-import { usersData } from './UsersData';
+import { usersData } from './UsersData.json';
 import { UserProps, Chat, Message } from '../../types';
 
 // Using the first two users from usersData to create sample chats
