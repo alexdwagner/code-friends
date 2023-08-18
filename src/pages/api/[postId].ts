@@ -1,7 +1,7 @@
 // pages/api/posts/[postId].ts
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { postData as posts } from '../../components/UsersData';
+import { postData as posts } from '../../components/UsersData.json';
 import { PostProps } from '../../../types';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

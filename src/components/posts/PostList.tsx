@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import PostCard from './PostCard';
 import { PostProps } from '../../../types';
-import { postData } from '../PostsData';  // Adjust the path to your PostsData.ts file
+import postData from '../PostsData.json'; 
 
 // Commenting out fetchPosts function since it's not currently used
 /*
