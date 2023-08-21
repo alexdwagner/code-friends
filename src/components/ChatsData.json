@@ -1,96 +1,94 @@
-{
-  "sampleChats": [
-    {
-      "id": "1",
-      "user": {
-        "userId": 1,
-        "profileImage": "https://robohash.org/joesmith?size=30x30",
-        "userName": "Joe Smith",
-        "userHandle": "joesmith",
-        "email": "joe.smith@example.com",
-        "descriptor": "Frontend Developer",
-        "offeringMentorship": false,
-        "seekingMentorship": true,
-        "lastActive": 1
-      },
-      "messages": [
-        {
-          "sender": {
-            "userId": 1,
-            "profileImage": "https://robohash.org/joesmith?size=30x30",
-            "userName": "Joe Smith",
-            "userHandle": "joesmith",
-            "email": "joe.smith@example.com",
-            "descriptor": "Frontend Developer",
-            "offeringMentorship": false,
-            "seekingMentorship": true,
-            "lastActive": 1
-          },
-          "text": "Hello! My name is Joe Smith.",
-          "timestamp": "2023-08-15T00:00:00Z"
-        },
-        {
-          "sender": {
-            "userId": 1,
-            "profileImage": "https://robohash.org/joesmith?size=30x30",
-            "userName": "Joe Smith",
-            "userHandle": "joesmith",
-            "email": "joe.smith@example.com",
-            "descriptor": "Frontend Developer",
-            "offeringMentorship": false,
-            "seekingMentorship": true,
-            "lastActive": 1
-          },
-          "text": "Hi, nice to meet you!",
-          "timestamp": "2023-08-15T00:00:00Z"
-        }
-      ]
+[
+  {
+    "id": "1",
+    "user": {
+      "userId": 1,
+      "profileImage": "https://robohash.org/joesmith?size=30x30",
+      "userName": "Joe Smith",
+      "userHandle": "joesmith",
+      "email": "joe.smith@example.com",
+      "descriptor": "Frontend Developer",
+      "offeringMentorship": false,
+      "seekingMentorship": true,
+      "lastActive": 1
     },
-    {
-      "id": "2",
-      "user": {
-        "userId": 2,
-        "profileImage": "https://robohash.org/janesmith.png?size=30x30",
-        "userName": "Sachin",
-        "userHandle": "sachin",
-        "email": "sachin@example.com",
-        "descriptor": "Professional",
-        "offeringMentorship": false,
-        "seekingMentorship": true,
-        "lastActive": 2
-      },
-      "messages": [
-        {
-          "sender": {
-            "userId": 2,
-            "profileImage": "https://robohash.org/janesmith.png?size=30x30",
-            "userName": "Sachin",
-            "userHandle": "sachin",
-            "email": "sachin@example.com",
-            "descriptor": "Professional",
-            "offeringMentorship": false,
-            "seekingMentorship": true,
-            "lastActive": 2
-          },
-          "text": "Hello! My name is Sachin.",
-          "timestamp": "2023-08-15T00:00:00Z"
+    "messages": [
+      {
+        "sender": {
+          "userId": 1,
+          "profileImage": "https://robohash.org/joesmith?size=30x30",
+          "userName": "Joe Smith",
+          "userHandle": "joesmith",
+          "email": "joe.smith@example.com",
+          "descriptor": "Frontend Developer",
+          "offeringMentorship": false,
+          "seekingMentorship": true,
+          "lastActive": 1
         },
-        {
-          "sender": {
-            "userId": 2,
-            "profileImage": "https://robohash.org/janesmith.png?size=30x30",
-            "userName": "Sachin",
-            "userHandle": "sachin",
-            "email": "sachin@example.com",
-            "descriptor": "Professional",
-            "offeringMentorship": false,
-            "seekingMentorship": true,
-            "lastActive": 2
-          },
-          "text": "Hi, nice to meet you!",
-          "timestamp": "2023-08-15T00:00:00Z"
-        }
-      ]
-    }
-  ]
-}
+        "text": "Hello! My name is Joe Smith.",
+        "timestamp": "2023-08-15T00:00:00Z"
+      },
+      {
+        "sender": {
+          "userId": 1,
+          "profileImage": "https://robohash.org/joesmith?size=30x30",
+          "userName": "Joe Smith",
+          "userHandle": "joesmith",
+          "email": "joe.smith@example.com",
+          "descriptor": "Frontend Developer",
+          "offeringMentorship": false,
+          "seekingMentorship": true,
+          "lastActive": 1
+        },
+        "text": "Hi, nice to meet you!",
+        "timestamp": "2023-08-15T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "user": {
+      "userId": 2,
+      "profileImage": "https://robohash.org/janesmith.png?size=30x30",
+      "userName": "Sachin",
+      "userHandle": "sachin",
+      "email": "sachin@example.com",
+      "descriptor": "Professional",
+      "offeringMentorship": false,
+      "seekingMentorship": true,
+      "lastActive": 2
+    },
+    "messages": [
+      {
+        "sender": {
+          "userId": 2,
+          "profileImage": "https://robohash.org/janesmith.png?size=30x30",
+          "userName": "Sachin",
+          "userHandle": "sachin",
+          "email": "sachin@example.com",
+          "descriptor": "Professional",
+          "offeringMentorship": false,
+          "seekingMentorship": true,
+          "lastActive": 2
+        },
+        "text": "Hello! My name is Sachin.",
+        "timestamp": "2023-08-15T00:00:00Z"
+      },
+      {
+        "sender": {
+          "userId": 2,
+          "profileImage": "https://robohash.org/janesmith.png?size=30x30",
+          "userName": "Sachin",
+          "userHandle": "sachin",
+          "email": "sachin@example.com",
+          "descriptor": "Professional",
+          "offeringMentorship": false,
+          "seekingMentorship": true,
+          "lastActive": 2
+        },
+        "text": "Hi, nice to meet you!",
+        "timestamp": "2023-08-15T00:00:00Z"
+      }
+    ]
+  }
+]

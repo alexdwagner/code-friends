@@ -15,9 +15,11 @@ const fetchPosts = async () => {
 };
 */
 
-const getDummyData = () => {
-  // You can put any logic you want here to manipulate the dummy data if needed
-  return postData;
+const getPostsData = (): PostProps[] => {
+  return postData.posts.map(post => ({
+    ...post,
+    author: { userId: post.author.userId }
+  }));
 };
 
 const PostList: React.FC = () => {
@@ -35,7 +37,7 @@ const PostList: React.FC = () => {
   */
 
   // Using the dummy data function directly
-  const posts: PostProps[] = getDummyData();
+  const posts: PostProps[] = getPostsData();
 
   return (
     <div className="container mx-auto px-2" style={{ maxHeight: '80vh', overflowY: 'auto' }}>

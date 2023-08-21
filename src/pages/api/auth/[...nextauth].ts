@@ -1,18 +1,16 @@
 import NextAuth from 'next-auth';
-// import GoogleProvider from 'next-auth/providers/google';
-// import GitHubProvider from 'next-auth/providers/github';
+import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
+
+const clientId = process.env.GOOGLE_CLIENT_ID!;
+const clientSecret = process.env.GOOGLE_CLIENT_SECRET!;
 
 export default NextAuth({
   providers: [
-    // GoogleProvider({
-    //   clientId: process.env.GOOGLE_CLIENT_ID,
-    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    // }),
-    // GitHubProvider({
-    //   clientId: process.env.GITHUB_CLIENT_ID,
-    //   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    // }),
+    GoogleProvider({
+      clientId: clientId,
+      clientSecret: clientSecret,
+    }),
     CredentialsProvider({
       name: 'Local Account',
       credentials: {
@@ -20,10 +18,15 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       authorize: async (credentials) => {
-        // Here you'll need to authenticate the user with your database
-        // If authentication is successful, return the user object
-        // Otherwise, return null
-      },
+        // Check if credentials are defined
+        if (!credentials) return null;
+
+        // Dummy check, replace with real authentication later
+        if (credentials.email === "test@example.com" && credentials.password === "password") {
+            return { id: '1', email: "test@example.com", name: "Test User" }; // Return a user object
+        }
+        return null; // Return null if authentication fails
+      }
     }),
   ],
   // Add custom configurations if needed

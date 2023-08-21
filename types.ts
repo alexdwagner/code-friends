@@ -23,7 +23,9 @@ export type UserProps = {
 // Post-related types
 export type PostProps = {
     postId: number;
-    author: UserProps; // Use UserProps here
+    author: {
+        userId: number;
+    };
     postTopic: string;
     postHeadline: string;
     postBody: string;
@@ -65,3 +67,4 @@ export type ChatRequest = {
     onAcceptRequest: (requestId: number) => void;
     onRejectRequest: (requestId: number) => void;
   };
+

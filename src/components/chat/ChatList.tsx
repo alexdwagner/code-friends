@@ -1,6 +1,6 @@
 import React from 'react';
 import ChatListItem from './ChatListItem';  
-import { sampleChats } from '../ChatsData';
+import chatsData from '../ChatsData.json';
 import { UserProps, Chat, Message } from '../../../types';  
 
 

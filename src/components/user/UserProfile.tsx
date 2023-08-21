@@ -5,8 +5,8 @@ import { PostProps, UserProps } from '../../../types';
 interface UserProfileProps {
     user: {
         profileImage: string;
-        name: string;
-        handle: string;
+        userName: string;
+        userHandle: string;
         descriptor: string;
         offeringMentorship: boolean;
         seekingMentorship: boolean;
@@ -32,7 +32,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
     return (
         <div className="bg-gray-100 p-4">
             <div className="flex items-center">
-                <img src={editedUser.profileImage} alt={editedUser.name} className="w-16 h-16 rounded-full" />
+                <img src={editedUser.profileImage} alt={editedUser.userName} className="w-16 h-16 rounded-full" />
                 {isEditing ? (
                     <input type="file" onChange={handleImageChange} />
                 ) : null}
@@ -41,13 +41,13 @@ const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
                         <>
                             <input 
                                 type="text" 
-                                value={editedUser.name} 
+                                value={editedUser.userName} 
                                 onChange={e => setEditedUser(prevState => ({ ...prevState, name: e.target.value }))}
                                 className="border p-2 w-full mb-4 rounded shadow appearance-none focus:outline-none focus:ring-2 focus:ring-blue-600"
                             />
                             <input 
                                 type="text" 
-                                value={editedUser.handle} 
+                                value={editedUser.userHandle} 
                                 onChange={e => setEditedUser(prevState => ({ ...prevState, handle: e.target.value }))}
                                 className="border p-2 w-full mb-4 rounded shadow appearance-none focus:outline-none focus:ring-2 focus:ring-blue-600"
                             />
@@ -78,8 +78,8 @@ const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
                         </>
                     ) : (
                         <>
-                            <h1 className="text-2xl font-semibold">{editedUser.name}</h1>
-                            <p>@{editedUser.handle}</p>
+                            <h1 className="text-2xl font-semibold">{editedUser.userName}</h1>
+                            <p>@{editedUser.userHandle}</p>
                             <p>{editedUser.descriptor}</p>
                             {editedUser.offeringMentorship && <p>Offering mentorship</p>}
                             {editedUser.seekingMentorship && <p>Seeking mentorship</p>}

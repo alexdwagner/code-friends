@@ -1,7 +1,5 @@
-// pages/api/posts/[postId].ts
-
 import { NextApiRequest, NextApiResponse } from 'next';
-import { postData as posts } from '../../components/UsersData.json';
+import postData from '../../components/PostsData.json'; 
 import { PostProps } from '../../../types';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -9,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'GET') {
     // Get data from database
-    const post = posts.find(post => post.id === Number(postId));
+    const post = postData.posts.find((post: PostProps) => post.postId === Number(postId));
     
     if (!post) {
       res.status(404).json({ message: 'Not found' });

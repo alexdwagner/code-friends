@@ -2,10 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import { sampleChats } from '../components/ChatsData';  
 import ChatList from '../components/chat/ChatList'; 
 import ChatWindow from '../components/chat/ChatWindow';
-import { User, Chat, Message } from '../../types';  
+import { UserProps, Chat, Message } from '../../types';  
+import sampleChatsData from '../components/ChatsData.json';
+
+// Define the types
+type SampleChatType = {
+  id: string;
+  user: UserProps;
+  messages: Message[];
+};
+
+type SampleChatsType = SampleChatType[];
+
+// Process the imported sampleChats
+const processedChats: Chat[] = sampleChatsData.map(chat => ({
+    ...chat,
+    messages: chat.messages.map(message => ({
+        ...message,
+        timestamp: new Date(message.timestamp)
+    }))
+}));
 
 const ChatPage: React.FC = () => {
   const router = useRouter();
@@ -14,14 +32,14 @@ const ChatPage: React.FC = () => {
   useEffect(() => {
     if (router.query.user) {
       const userHandle = router.query.user as string;
-      const chat = sampleChats.find(c => c.user.handle === userHandle);
-      setSelectedChat(chat || sampleChats[0]);
+      const chat = processedChats.find(c => c.user.userHandle === userHandle);
+      setSelectedChat(chat || processedChats[0]);
     } else {
-      setSelectedChat(sampleChats[0]);
+      setSelectedChat(processedChats[0]);
     }
   }, [router.query]);
 
-  const chatUsers = sampleChats.map(chat => chat.user);
+  const chatUsers = processedChats.map(chat => chat.user);
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -32,7 +50,7 @@ const ChatPage: React.FC = () => {
           <ChatList 
             users={chatUsers} 
             onUserSelect={(user) => {
-                const chat = sampleChats.find(chat => chat.user.id === user.id);
+                const chat = processedChats.find(chat => chat.user.userId === user.userId);
                 setSelectedChat(chat ? chat : {
                     id: Date.now().toString(),
                     user: user,
